@@ -1,3 +1,8 @@
+### This demo is based on this LinkedIn Learning tutorial
+
+- https://www.linkedin.com/learning/building-restful-apis-with-node-js-and-express
+
+
 ## Quickstart
 
 ### Create your free MongoDB Cloud instance (server)
@@ -23,8 +28,3 @@ npm install
 npm start
 ```
 
-## Credits
-
-### This demo is based on this LinkedIn Learning tutorial
-
-- https://www.linkedin.com/learning/building-restful-apis-with-node-js-and-express
