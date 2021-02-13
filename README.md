@@ -2,11 +2,11 @@
 
 ### Create your free MongoDB Cloud instance (server)
 
-https://www.mongodb.com/free-cloud-database
+* https://www.mongodb.com/free-cloud-database
 
 ### Download and install MongoDB Compass (client)
 
-https://www.mongodb.com/products/compass
+* https://www.mongodb.com/products/compass
 
 Then, install, run, and create a user/pass and connect to your instance
 
@@ -25,6 +25,6 @@ npm start
 
 ## Credits
 
-### LinkedIn Learning
+### This demo is based on this LinkedIn Learning tutorial
 
 - https://www.linkedin.com/learning/building-restful-apis-with-node-js-and-express
