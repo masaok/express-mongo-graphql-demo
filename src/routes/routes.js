@@ -3,6 +3,7 @@ import {
   getContacts,
   getContactWithID,
   updateContact,
+  deleteContact,
 } from '../controllers/controller'
 
 const routes = app => {
@@ -16,11 +17,7 @@ const routes = app => {
     }, getContacts)
     .post(addnewContact)
 
-  app
-    .route('/contact/:contactID')
-    .get(getContactWithID)
-    .put(updateContact)
-    .delete((req, res) => res.send('DELETE request successful!'))
+  app.route('/contact/:contactID').get(getContactWithID).put(updateContact).delete(deleteContact)
 }
 
 export default routes

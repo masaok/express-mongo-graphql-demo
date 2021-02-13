@@ -36,6 +36,9 @@ app.use(bodyParser.json())
 routes(app)
 app.use(cors())
 
+// serving static files
+app.use(express.static('public'))
+
 // // parse requests of content-type - application/json
 // app.use(bodyParser.json())
 
