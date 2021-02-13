@@ -22,7 +22,7 @@ mongoose.Promise = global.Promise
 
 try {
   mongoose.connect(
-    `mongodb+srv://${process.env.DBUSER}:${process.env.DBPASS}@cluster0.0ncyw.mongodb.net/test`,
+    `mongodb+srv://${process.env.DBUSER}:${process.env.DBPASS}@${process.env.DBHOST}/${process.env.DBNAME}`,
     { useNewUrlParser: true, useUnifiedTopology: true }
   )
 } catch (err) {
