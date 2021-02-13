@@ -1,21 +1,38 @@
 require('dotenv').config()
-// import bodyParser from "body-parser";
 import cors from 'cors'
 import express from 'express'
 import routes from './src/routes/routes'
+import mongoose from 'mongoose'
+import bodyParser from 'body-parser'
 // import regeneratorRuntime from 'regenerator-runtime'
 // import "regenerator-runtime/runtime.js";
 
 // import dbh from "./src/config/database.js";
 
+const app = express()
 const PORT = 4000
 const KEEP_ALIVE_INTERVAL = 5000
 
-// console.log('DBUSER: ' + process.env.DBUSER)
-// console.log('DBNAME: ' + process.env.DBNAME)
+console.log('DBUSER: ' + process.env.DBUSER)
+console.log('DBNAME: ' + process.env.DBNAME)
 // console.log('DBHOST: ' + process.env.DBHOST)
 
-const app = express()
+// mongoose connection
+mongoose.Promise = global.Promise
+
+try {
+  mongoose.connect(
+    `mongodb+srv://${process.env.DBUSER}:${process.env.DBPASS}@cluster0.0ncyw.mongodb.net/test`,
+    { useNewUrlParser: true, useUnifiedTopology: true }
+  )
+} catch (err) {
+  throw new Error(err)
+}
+
+// bodyparser setup
+app.use(bodyParser.urlencoded({ extended: true }))
+app.use(bodyParser.json())
+
 routes(app)
 app.use(cors())
 
