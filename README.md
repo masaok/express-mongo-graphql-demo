@@ -21,12 +21,28 @@ Then, install, run, and create a user/pass and connect to your instance
 cp .env.samples .env  # edit this file with your db info
 ```
 
-### Install and run
+### Install and run locally
 
 ```
 npm install
 npm start
 ```
+
+### Deploy to Vercel
+
+```
+now --prod
+```
+
+Alternatively...
+
+```
+npx vercel login
+npx vercel --prod
+```
+
+* https://dev.to/preciouschicken/stacking-vercel-a-graphql-apollo-server-and-react-2l55
+
 
 ## Live Demo
 
