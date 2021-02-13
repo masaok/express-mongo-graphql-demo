@@ -1,4 +1,4 @@
-### This demo is based on this LinkedIn Learning tutorial
+### This demo is based on this LinkedIn Learning tutorial:
 
 - https://www.linkedin.com/learning/building-restful-apis-with-node-js-and-express
 
